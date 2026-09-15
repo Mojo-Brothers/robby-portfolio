@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 842 595" fill="none">
+  <!-- A4 Landscape Paper Background -->
+  <rect width="842" height="595" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  
+  <!-- Document Header / Kop Dokumen -->
+  <rect x="40" y="30" width="762" height="75" fill="#F8FAFC" rx="4" stroke="#E2E8F0"/>
+  <rect x="56" y="44" width="45" height="45" rx="8" fill="#0F172A"/>
+  <text x="78" y="72" text-anchor="middle" fill="#2DD4BF" font-family="monospace" font-size="20" font-weight="bold">IGD</text>
+  
+  <text x="115" y="58" fill="#0F172A" font-family="sans-serif" font-size="14" font-weight="bold">RUMAH SAKIT UMUM DAERAH / KORPORAT [SIMULASI OPERASIONAL]</text>
+  <text x="115" y="74" fill="#334155" font-family="sans-serif" font-size="12">INSTALASI GAWAT DARURAT — UNIT PELAYANAN AMBULANS & EVAKUASI MEDIS</text>
+  <text x="115" y="90" fill="#64748B" font-family="monospace" font-size="10">Jl. Pelayanan Kesehatan No. 10 • Telp: (021) 555-0199 • Dokumen Akuntabilitas Operasional</text>
+
+  <!-- Title & Period Filter -->
+  <text x="40" y="130" fill="#0F172A" font-family="sans-serif" font-size="14" font-weight="bold">LAPORAN REKAPITULASI EKSPEDISI AMBULANS BULANAN</text>
+  <text x="40" y="146" fill="#64748B" font-family="monospace" font-size="11">PERIODE: 01 SEPTEMBER 2026 s.d. 30 SEPTEMBER 2026 • TOTAL TRIP: 48 • TOTAL JARAK: 942.8 KM</text>
+
+  <!-- 13-Column Table Header -->
+  <g transform="translate(40, 160)">
+    <rect width="762" height="24" fill="#0F172A" rx="2"/>
+    <text x="10" y="16" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">NO</text>
+    <text x="40" y="16" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">TANGGAL</text>
+    <text x="110" y="16" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">ARMADA</text>
+    <text x="180" y="16" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">DRIVER</text>
+    <text x="250" y="16" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">NO. RM</text>
+    <text x="320" y="16" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">NAMA PASIEN</text>
+    <text x="420" y="16" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">TUJUAN RUJUKAN</text>
+    <text x="560" y="16" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">BERANGKAT</text>
+    <text x="630" y="16" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">KEMBALI</text>
+    <text x="700" y="16" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">JARAK (KM)</text>
+
+    <!-- Row 1 -->
+    <rect y="26" width="762" height="22" fill="#F8FAFC"/>
+    <text x="10" y="41" fill="#334155" font-family="monospace" font-size="9">01</text>
+    <text x="40" y="41" fill="#334155" font-family="monospace" font-size="9">01/09/2026</text>
+    <text x="110" y="41" fill="#0F172A" font-family="sans-serif" font-size="9">EVALIA 01</text>
+    <text x="180" y="41" fill="#334155" font-family="sans-serif" font-size="9">Bpk. Agus</text>
+    <text x="250" y="41" fill="#334155" font-family="monospace" font-size="9">00-12-34</text>
+    <text x="320" y="41" fill="#334155" font-family="sans-serif" font-size="9">Tn. Pasien A [Simulasi]</text>
+    <text x="420" y="41" fill="#334155" font-family="sans-serif" font-size="9">RSUP Dr. Cipto Mangunkusumo</text>
+    <text x="560" y="41" fill="#334155" font-family="monospace" font-size="9">08:30 WIB</text>
+    <text x="630" y="41" fill="#334155" font-family="monospace" font-size="9">10:45 WIB</text>
+    <text x="700" y="41" fill="#0F172A" font-family="monospace" font-size="9" font-weight="bold">28.4 KM</text>
+
+    <!-- Row 2 -->
+    <rect y="50" width="762" height="22" fill="#FFFFFF"/>
+    <text x="10" y="65" fill="#334155" font-family="monospace" font-size="9">02</text>
+    <text x="40" y="65" fill="#334155" font-family="monospace" font-size="9">02/09/2026</text>
+    <text x="110" y="65" fill="#0F172A" font-family="sans-serif" font-size="9">PHC 02</text>
+    <text x="180" y="65" fill="#334155" font-family="sans-serif" font-size="9">Bpk. Dedi</text>
+    <text x="250" y="65" fill="#334155" font-family="monospace" font-size="9">00-12-88</text>
+    <text x="320" y="65" fill="#334155" font-family="sans-serif" font-size="9">Ny. Pasien B [Simulasi]</text>
+    <text x="420" y="65" fill="#334155" font-family="sans-serif" font-size="9">RS Jantung Harapan Kita</text>
+    <text x="560" y="65" fill="#334155" font-family="monospace" font-size="9">13:15 WIB</text>
+    <text x="630" y="65" fill="#334155" font-family="monospace" font-size="9">15:50 WIB</text>
+    <text x="700" y="65" fill="#0F172A" font-family="monospace" font-size="9" font-weight="bold">34.2 KM</text>
+
+    <!-- Row 3 -->
+    <rect y="74" width="762" height="22" fill="#F8FAFC"/>
+    <text x="10" y="89" fill="#334155" font-family="monospace" font-size="9">03</text>
+    <text x="40" y="89" fill="#334155" font-family="monospace" font-size="9">03/09/2026</text>
+    <text x="110" y="89" fill="#0F172A" font-family="sans-serif" font-size="9">BSI 01</text>
+    <text x="180" y="89" fill="#334155" font-family="sans-serif" font-size="9">Bpk. Joko</text>
+    <text x="250" y="89" fill="#334155" font-family="monospace" font-size="9">00-13-05</text>
+    <text x="320" y="89" fill="#334155" font-family="sans-serif" font-size="9">An. Pasien C [Simulasi]</text>
+    <text x="420" y="89" fill="#334155" font-family="sans-serif" font-size="9">RSAB Harapan Kita</text>
+    <text x="560" y="89" fill="#334155" font-family="monospace" font-size="9">09:00 WIB</text>
+    <text x="630" y="89" fill="#334155" font-family="monospace" font-size="9">11:10 WIB</text>
+    <text x="700" y="89" fill="#0F172A" font-family="monospace" font-size="9" font-weight="bold">22.0 KM</text>
+  </g>
+
+  <!-- Signature Block -->
+  <g transform="translate(40, 470)">
+    <text x="80" y="20" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="10">Dicetak Oleh:</text>
+    <text x="80" y="36" text-anchor="middle" fill="#64748B" font-family="monospace" font-size="9">Petugas Admin Ambulans IGD</text>
+    <line x1="10" y1="75" x2="150" y2="75" stroke="#94A3B8" stroke-dasharray="2"/>
+    <text x="80" y="88" text-anchor="middle" fill="#0F172A" font-family="sans-serif" font-size="10" font-weight="bold">( Petugas Pelaksana )</text>
+
+    <text x="680" y="20" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="10">Mengetahui & Menyetujui,</text>
+    <text x="680" y="36" text-anchor="middle" fill="#64748B" font-family="monospace" font-size="9">Koordinator Pelayanan Medis IGD</text>
+    <line x1="610" y1="75" x2="750" y2="75" stroke="#94A3B8" stroke-dasharray="2"/>
+    <text x="680" y="88" text-anchor="middle" fill="#0F172A" font-family="sans-serif" font-size="10" font-weight="bold">( dr. Koordinator IGD )</text>
+  </g>
+
+  <text x="40" y="575" fill="#94A3B8" font-family="monospace" font-size="9">Dicetak otomatis dari Sistem IGD • Dokumen Akuntabilitas Formal A4 Landscape • Format jsPDF + SheetJS</text>
+</svg>

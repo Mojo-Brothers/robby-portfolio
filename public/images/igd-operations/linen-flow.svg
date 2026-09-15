@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="16" fill="#0F172A"/>
+  
+  <!-- Header Bar -->
+  <rect x="24" y="24" width="752" height="60" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="44" y="55" fill="#F8FAFC" font-family="sans-serif" font-size="16" font-weight="bold">LinenFlow IGD — Manajemen Stok & Sirkulasi Laundry Medis</text>
+  <text x="44" y="73" fill="#14B8A6" font-family="monospace" font-size="11">REAL-TIME MONITORING LEMARI IGD</text>
+  <rect x="660" y="38" width="100" height="30" rx="6" fill="#0D9488"/>
+  <text x="674" y="58" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="bold">+ Catat Mutasi</text>
+
+  <!-- Stock Status Cards -->
+  <g transform="translate(24, 100)">
+    <!-- Card 1: Sprei Pasien -->
+    <rect width="237" height="120" rx="10" fill="#1E293B" stroke="#334155"/>
+    <text x="16" y="32" fill="#94A3B8" font-family="sans-serif" font-size="13">Sprei Pasien IGD</text>
+    <rect x="170" y="18" width="52" height="20" rx="4" fill="#059669" fill-opacity="0.2"/>
+    <text x="180" y="32" fill="#34D399" font-family="monospace" font-size="10" font-weight="bold">AMAN</text>
+    <text x="16" y="75" fill="#FFFFFF" font-family="monospace" font-size="32" font-weight="bold">42 <tspan font-size="14" fill="#64748B">/ 50 pcs</tspan></text>
+    <rect x="16" y="90" width="205" height="6" rx="3" fill="#334155"/>
+    <rect x="16" y="90" width="170" height="6" rx="3" fill="#10B981"/>
+
+    <!-- Card 2: Selimut Pasien -->
+    <rect x="257" width="237" height="120" rx="10" fill="#1E293B" stroke="#334155"/>
+    <text x="273" y="32" fill="#94A3B8" font-family="sans-serif" font-size="13">Selimut Hangat IGD</text>
+    <rect x="427" y="18" width="58" height="20" rx="4" fill="#D97706" fill-opacity="0.2"/>
+    <text x="435" y="32" fill="#FBBF24" font-family="monospace" font-size="10" font-weight="bold">MENIPIS</text>
+    <text x="273" y="75" fill="#FFFFFF" font-family="monospace" font-size="32" font-weight="bold">14 <tspan font-size="14" fill="#64748B">/ 40 pcs</tspan></text>
+    <rect x="273" y="90" width="205" height="6" rx="3" fill="#334155"/>
+    <rect x="273" y="90" width="70" height="6" rx="3" fill="#F59E0B"/>
+
+    <!-- Card 3: Perlak & Sarung Bantal -->
+    <rect x="515" width="237" height="120" rx="10" fill="#1E293B" stroke="#334155"/>
+    <text x="531" y="32" fill="#94A3B8" font-family="sans-serif" font-size="13">Sarung Bantal Medis</text>
+    <rect x="685" y="18" width="56" height="20" rx="4" fill="#E11D48" fill-opacity="0.2"/>
+    <text x="695" y="32" fill="#FB7185" font-family="monospace" font-size="10" font-weight="bold">KRITIS</text>
+    <text x="531" y="75" fill="#FFFFFF" font-family="monospace" font-size="32" font-weight="bold">05 <tspan font-size="14" fill="#64748B">/ 30 pcs</tspan></text>
+    <rect x="531" y="90" width="205" height="6" rx="3" fill="#334155"/>
+    <rect x="531" y="90" width="34" height="6" rx="3" fill="#F43F5E"/>
+  </g>
+
+  <!-- Distribution Log Table -->
+  <g transform="translate(24, 238)">
+    <rect width="752" height="236" rx="10" fill="#1E293B" stroke="#334155"/>
+    <text x="20" y="30" fill="#F8FAFC" font-family="sans-serif" font-size="14" font-weight="bold">Riwayat Serah Terima & Mutasi Terakhir</text>
+    <text x="20" y="48" fill="#94A3B8" font-family="monospace" font-size="11">VERIFIKASI PIN PETUGAS LAUNDRY</text>
+
+    <!-- Table header -->
+    <rect x="20" y="62" width="712" height="30" rx="6" fill="#0F172A"/>
+    <text x="32" y="81" fill="#94A3B8" font-family="monospace" font-size="11">WAKTU</text>
+    <text x="140" y="81" fill="#94A3B8" font-family="monospace" font-size="11">JENIS LINEN</text>
+    <text x="320" y="81" fill="#94A3B8" font-family="monospace" font-size="11">STATUS ALUR</text>
+    <text x="490" y="81" fill="#94A3B8" font-family="monospace" font-size="11">JUMLAH</text>
+    <text x="620" y="81" fill="#94A3B8" font-family="monospace" font-size="11">VERIFIKASI</text>
+
+    <!-- Row 1 -->
+    <text x="32" y="118" fill="#E2E8F0" font-family="monospace" font-size="12">08:15 WIB</text>
+    <text x="140" y="118" fill="#E2E8F0" font-family="sans-serif" font-size="12">Sprei Pasien IGD</text>
+    <text x="320" y="118" fill="#34D399" font-family="sans-serif" font-size="12">Penerimaan Bersih</text>
+    <text x="490" y="118" fill="#F8FAFC" font-family="monospace" font-size="12">+25 pcs</text>
+    <text x="620" y="118" fill="#14B8A6" font-family="monospace" font-size="11">PIN #8821 [OK]</text>
+
+    <!-- Row 2 -->
+    <line x1="20" y1="135" x2="732" y2="135" stroke="#334155" stroke-width="0.8"/>
+    <text x="32" y="160" fill="#E2E8F0" font-family="monospace" font-size="12">07:40 WIB</text>
+    <text x="140" y="160" fill="#E2E8F0" font-family="sans-serif" font-size="12">Linen Kotor Infeksius</text>
+    <text x="320" y="160" fill="#FBBF24" font-family="sans-serif" font-size="12">Kirim ke Laundry</text>
+    <text x="490" y="160" fill="#F8FAFC" font-family="monospace" font-size="12">-30 pcs</text>
+    <text x="620" y="160" fill="#14B8A6" font-family="monospace" font-size="11">PIN #8821 [OK]</text>
+
+    <!-- Row 3 -->
+    <line x1="20" y1="177" x2="732" y2="177" stroke="#334155" stroke-width="0.8"/>
+    <text x="32" y="202" fill="#E2E8F0" font-family="monospace" font-size="12">06:50 WIB</text>
+    <text x="140" y="202" fill="#E2E8F0" font-family="sans-serif" font-size="12">Selimut Pasien</text>
+    <text x="320" y="202" fill="#34D399" font-family="sans-serif" font-size="12">Penerimaan Bersih</text>
+    <text x="490" y="202" fill="#F8FAFC" font-family="monospace" font-size="12">+10 pcs</text>
+    <text x="620" y="202" fill="#14B8A6" font-family="monospace" font-size="11">PIN #4190 [OK]</text>
+  </g>
+</svg>

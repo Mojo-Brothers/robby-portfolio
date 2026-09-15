@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 650" fill="none">
+  <rect width="400" height="650" rx="28" fill="#0F172A"/>
+  <!-- Status bar -->
+  <rect x="20" y="20" width="360" height="28" rx="8" fill="#1E293B"/>
+  <text x="35" y="38" fill="#94A3B8" font-family="monospace" font-size="11">08:45 WIB • IGD WORKSTATION</text>
+  <rect x="330" y="28" width="35" height="12" rx="4" fill="#0D9488"/>
+
+  <!-- Mobile Header -->
+  <rect x="20" y="60" width="360" height="60" rx="14" fill="#1E293B" stroke="#334155"/>
+  <text x="36" y="85" fill="#F8FAFC" font-family="sans-serif" font-size="14" font-weight="bold">Ekspedisi Ambulans IGD</text>
+  <text x="36" y="103" fill="#14B8A6" font-family="monospace" font-size="11">PIN GATE TERVERIFIKASI [DRIVER #04]</text>
+
+  <!-- Trip Active Card -->
+  <rect x="20" y="132" width="360" height="150" rx="14" fill="#1E293B" stroke="#0D9488" stroke-width="1.5"/>
+  <rect x="36" y="148" width="70" height="22" rx="6" fill="#0D9488" fill-opacity="0.2"/>
+  <text x="44" y="163" fill="#2DD4BF" font-family="monospace" font-size="10" font-weight="bold">IN-PROGRESS</text>
+  <text x="36" y="192" fill="#FFFFFF" font-family="sans-serif" font-size="15" font-weight="bold">Armada: EVALIA 01 [B 1928 PH]</text>
+  <text x="36" y="212" fill="#94A3B8" font-family="sans-serif" font-size="12">Pasien: Tn. Pasien Simulasi (RM: 00-12-34)</text>
+  <text x="36" y="230" fill="#94A3B8" font-family="sans-serif" font-size="12">Tujuan: Rujukan RS Pusat Pertamina</text>
+  
+  <rect x="36" y="246" width="328" height="24" rx="6" fill="#0F172A"/>
+  <text x="46" y="262" fill="#38BDF8" font-family="monospace" font-size="11">Odometer: 142.4 KM • Estimasi: 28 Menit</text>
+
+  <!-- Quick Action Grid -->
+  <rect x="20" y="296" width="174" height="70" rx="12" fill="#1E293B" stroke="#334155"/>
+  <text x="36" y="322" fill="#E2E8F0" font-family="sans-serif" font-size="12" font-weight="bold">Peta Rute Leaflet</text>
+  <text x="36" y="342" fill="#94A3B8" font-family="monospace" font-size="10">GPS Coordinates</text>
+
+  <rect x="206" y="296" width="174" height="70" rx="12" fill="#1E293B" stroke="#334155"/>
+  <text x="222" y="322" fill="#E2E8F0" font-family="sans-serif" font-size="12" font-weight="bold">Selesai Trip</text>
+  <text x="222" y="342" fill="#14B8A6" font-family="monospace" font-size="10">Submit Catatan KM</text>
+
+  <!-- Monthly Stats Container -->
+  <rect x="20" y="380" width="360" height="230" rx="14" fill="#1E293B" stroke="#334155"/>
+  <text x="36" y="406" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="bold">Rekapitulasi Armada Bulan Ini</text>
+  
+  <!-- Stat rows -->
+  <rect x="36" y="422" width="328" height="42" rx="8" fill="#0F172A"/>
+  <text x="48" y="447" fill="#E2E8F0" font-family="sans-serif" font-size="12">Total Perjalanan Jemput/Rujuk</text>
+  <text x="300" y="447" fill="#2DD4BF" font-family="monospace" font-size="13" font-weight="bold">48 Trip</text>
+
+  <rect x="36" y="472" width="328" height="42" rx="8" fill="#0F172A"/>
+  <text x="48" y="497" fill="#E2E8F0" font-family="sans-serif" font-size="12">Akumulasi Jarak Tempuh</text>
+  <text x="290" y="497" fill="#38BDF8" font-family="monospace" font-size="13" font-weight="bold">942.8 KM</text>
+
+  <rect x="36" y="522" width="328" height="42" rx="8" fill="#0F172A"/>
+  <text x="48" y="547" fill="#E2E8F0" font-family="sans-serif" font-size="12">Ekspor Laporan (Excel / PDF)</text>
+  <text x="300" y="547" fill="#A7F3D0" font-family="monospace" font-size="11">Ready</text>
+
+  <rect x="36" y="574" width="328" height="22" rx="6" fill="#334155"/>
+  <text x="46" y="589" fill="#94A3B8" font-family="monospace" font-size="10">SYNTHETIC FIELD WORKSTATION DEMO</text>
+</svg>
