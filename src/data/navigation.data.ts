@@ -13,7 +13,7 @@ export const NAV_LINKS: NavLink[] = [
 export const SOCIAL_LINKS = {
   github: 'https://github.com/Mojo-Brothers',
   email: 'obbyvior@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/robby-viory-fansya/',
+  linkedin: 'https://www.linkedin.com/in/roby-viori-fansya-2b0423437/',
   nurseflowRepo: 'https://github.com/Mojo-Brothers/NurseFlow-WebApp',
   igdRepo: 'https://github.com/Mojo-Brothers/igd-manajemen-sistem',
 };

@@ -84,7 +84,7 @@ Proyek yang ditampilkan dalam portofolio ini merupakan inisiatif pengembangan pe
 
 * **Email:** [obbyvior@gmail.com](mailto:obbyvior@gmail.com)
 * **GitHub:** [https://github.com/Mojo-Brothers](https://github.com/Mojo-Brothers)
-* **LinkedIn:** [https://www.linkedin.com/in/robby-viory-fansya/](https://www.linkedin.com/in/robby-viory-fansya/)
+* **LinkedIn:** [https://www.linkedin.com/in/roby-viori-fansya-2b0423437/](https://www.linkedin.com/in/roby-viori-fansya-2b0423437/)
 
 ---
 
