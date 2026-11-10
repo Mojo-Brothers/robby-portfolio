@@ -54,7 +54,7 @@ export const RESUME_DATA: ResumeData = {
     'Praktisi operasional fasilitas kesehatan yang memiliki pemahaman mendalam tentang dinamika kerja klinis di lapangan, dikombinasikan dengan keahlian teknis dalam Technical Support, analisis sistem, dan pengembangan perangkat lunak mandiri. Memiliki rekam jejak dalam mengidentifikasi hambatan alur birokrasi rumah sakit dan menerjemahkannya menjadi solusi digital yang terstruktur, aman, dan mudah digunakan staf medis. Mahir memanfaatkan AI-assisted development untuk mempercepat riset arsitektur dan siklus pengujian kode secara disiplin.',
   experiences: [
     {
-      period: '2023 - Sekarang',
+      period: '2011 - 2026',
       role: 'Hospital Operations, Administration & Technical Support',
       organization: 'Lingkungan Pelayanan Fasilitas Kesehatan',
       location: 'Indonesia',
@@ -76,8 +76,8 @@ export const RESUME_DATA: ResumeData = {
       ],
     },
     {
-      period: '2024 - 2026',
-      role: 'Independent Software Developer & Healthcare Systems Modeler',
+      period: '2015 - 2026',
+      role: 'Independent Software Developer & Systems Modeler',
       organization: 'Mojo Brothers (Proyek Independen)',
       location: 'Indonesia',
       type: 'Pengembangan Perangkat Lunak Mandiri',

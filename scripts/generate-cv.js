@@ -146,7 +146,7 @@ async function generateCV() {
 
   // Role 1
   page.drawText('Hospital Operations, Administration & Technical Support', { x: marginX, y, size: 9, font: fontBold, color: primaryColor });
-  page.drawText('2023 – Sekarang', { x: width - marginX - 70, y, size: 8, font: fontBold, color: darkTeal });
+  page.drawText('2011 – 2026', { x: width - marginX - 58, y, size: 8, font: fontBold, color: darkTeal });
   y -= 10;
   page.drawText('Lingkungan Fasilitas Pelayanan Kesehatan   |   Dukungan Operasional & Troubleshooting Sistem', { x: marginX, y, size: 7.8, font: fontOblique, color: mutedColor });
   y -= 11;
@@ -164,7 +164,7 @@ async function generateCV() {
 
   // Role 2
   page.drawText('Independent Software Developer & Systems Modeler', { x: marginX, y, size: 9, font: fontBold, color: primaryColor });
-  page.drawText('2024 – 2026', { x: width - marginX - 58, y, size: 8, font: fontBold, color: darkTeal });
+  page.drawText('2015 – 2026', { x: width - marginX - 58, y, size: 8, font: fontBold, color: darkTeal });
   y -= 10;
   page.drawText('Mojo Brothers (Proyek Inisiatif Mandiri)   |   Arsitektur Sistem Informasi Kesehatan', { x: marginX, y, size: 7.8, font: fontOblique, color: mutedColor });
   y -= 11;
