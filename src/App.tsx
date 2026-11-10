@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { PageWrapper } from './components/layout/PageWrapper';
+import { FloatingWhatsApp } from './components/common/FloatingWhatsApp';
 import { HomePage } from './pages/HomePage';
 
 // Route-level code splitting for sub-routes
@@ -40,7 +41,7 @@ const RouteLoadingFallback: React.FC = () => (
 export const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen relative">
         <Navbar />
         <PageWrapper>
           <Suspense fallback={<RouteLoadingFallback />}>
@@ -57,6 +58,7 @@ export const App: React.FC = () => {
           </Suspense>
         </PageWrapper>
         <Footer />
+        <FloatingWhatsApp />
       </div>
     </BrowserRouter>
   );

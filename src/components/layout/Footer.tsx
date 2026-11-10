@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, ExternalLink, ShieldCheck, Download, Lock } from 'lucide-react';
-import { Github, Linkedin } from '../common/Icons';
+import { Github, Linkedin, WhatsApp } from '../common/Icons';
 import { Container } from '../common/Container';
 import { NAV_LINKS, SOCIAL_LINKS } from '../../data/navigation.data';
 import { DISCLOSURE_TEXT } from '../../data/projects.data';
@@ -86,7 +86,18 @@ export const Footer: React.FC = () => {
                   <span>IGD Operations Platform (Studi Kasus)</span>
                 </Link>
               </li>
-              <li className="pt-2 border-t border-slate-100 flex items-center gap-3">
+              <li className="pt-2 border-t border-slate-100 flex items-center gap-2">
+                <a
+                  href={SOCIAL_LINKS.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs text-emerald-700 hover:text-emerald-800 font-semibold transition-colors"
+                >
+                  <WhatsApp className="w-4 h-4 text-emerald-600" />
+                  <span>WhatsApp: {SOCIAL_LINKS.whatsappNumber}</span>
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
                 <a
                   href={SOCIAL_LINKS.github}
                   target="_blank"

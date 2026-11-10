@@ -22,6 +22,8 @@ export interface ResumeData {
     fullName: string;
     headline: string;
     email: string;
+    phone: string;
+    whatsappUrl: string;
     phoneLocation: string;
     linkedIn: string;
     github: string;
@@ -41,6 +43,8 @@ export const RESUME_DATA: ResumeData = {
     fullName: 'Robby Viory Fansya',
     headline: 'Healthcare Operations & Digital Systems | Technical Support | Independent Software Projects',
     email: 'obbyvior@gmail.com',
+    phone: '+62 895-3721-15913',
+    whatsappUrl: 'https://wa.me/62895372115913?text=Halo%20Robby%20Viory%20Fansya,%20saya%20melihat%20portofolio%20Anda%20dan%20tertarik%20untuk%20berdiskusi.',
     phoneLocation: 'Indonesia (WIB) • Terbuka untuk Kerja On-Site / Hybrid / Remote',
     linkedIn: 'https://www.linkedin.com/in/roby-viori-fansya-2b0423437/',
     github: 'https://github.com/Mojo-Brothers',

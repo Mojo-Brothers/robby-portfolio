@@ -10,7 +10,7 @@ import { PROJECTS_DATA } from '../data/projects.data';
 import { VALUE_PILLARS, TECHNICAL_EVIDENCE_LIST, SKILL_CATEGORIES } from '../data/evidence.data';
 import { SOCIAL_LINKS } from '../data/navigation.data';
 import { CREATIVE_WORKS_DATA } from '../data/creative.data';
-import { Github, Linkedin } from '../components/common/Icons';
+import { Github, Linkedin, WhatsApp } from '../components/common/Icons';
 import {
   ArrowRight,
   Activity,
@@ -517,8 +517,20 @@ export const HomePage: React.FC = () => {
             </p>
             <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
               <Button
-                to="/contact"
+                href={SOCIAL_LINKS.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 variant="primary"
+                size="md"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white border-emerald-600"
+                icon={<WhatsApp className="w-4 h-4 text-white" />}
+                iconRight={<ExternalLink className="w-3.5 h-3.5 text-white/80" />}
+              >
+                Chat WhatsApp
+              </Button>
+              <Button
+                to="/contact"
+                variant="outline"
                 size="md"
                 iconRight={<ArrowRight className="w-4 h-4" />}
               >
@@ -539,7 +551,7 @@ export const HomePage: React.FC = () => {
                 size="md"
                 icon={<Linkedin className="w-4 h-4 text-teal-700" />}
               >
-                Kirim Pesan di LinkedIn
+                LinkedIn
               </Button>
             </div>
           </div>

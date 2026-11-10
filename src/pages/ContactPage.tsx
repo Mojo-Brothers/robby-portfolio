@@ -6,7 +6,7 @@ import { SectionHeader } from '../components/common/SectionHeader';
 import { MetaTags } from '../components/seo/MetaTags';
 import { useClipboard } from '../hooks/useClipboard';
 import { SOCIAL_LINKS } from '../data/navigation.data';
-import { Github, Linkedin } from '../components/common/Icons';
+import { Github, Linkedin, WhatsApp } from '../components/common/Icons';
 import {
   Mail,
   Copy,
@@ -17,42 +17,104 @@ import {
   Sparkles,
   Download,
   FileText,
+  PhoneCall,
 } from 'lucide-react';
 
 export const ContactPage: React.FC = () => {
-  const { hasCopied, copy } = useClipboard();
+  const emailClipboard = useClipboard();
+  const waClipboard = useClipboard();
 
   const handleCopyEmail = () => {
-    copy(SOCIAL_LINKS.email);
+    emailClipboard.copy(SOCIAL_LINKS.email);
+  };
+
+  const handleCopyWa = () => {
+    waClipboard.copy(SOCIAL_LINKS.whatsappRaw);
   };
 
   return (
     <>
       <MetaTags
         title="Kontak | Robby Viory Fansya — Healthcare Operations & Digital Systems"
-        description="Hubungi Robby Viory Fansya untuk peluang karir, diskusi seputar Healthcare IT, Technical Support, SIMRS, atau kolaborasi sistem informasi kesehatan."
+        description="Hubungi Robby Viory Fansya via WhatsApp 0895372115913, Email, atau LinkedIn untuk peluang karir, diskusi seputar Healthcare IT, Technical Support, atau SIMRS."
       />
 
       <div className="py-12 md:py-20 bg-slate-50/50 min-h-[calc(100vh-140px)]">
         <Container size="default">
           <SectionHeader
-            eyebrow="Saluran Komunikasi"
+            eyebrow="Saluran Komunikasi Langsung"
             title="Mari Terhubung & Mendiskusikan Peluang Kolaborasi"
             description="Terbuka untuk diskusi mengenai rekayasa sistem informasi rumah sakit, analisis alur kerja klinis, technical support, dan peluang karir di sektor Healthcare Technology."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            {/* Email Card */}
+            {/* 1. WhatsApp Card (Primary Highlight) */}
+            <Card className="p-6 sm:p-8 border-emerald-300/80 bg-emerald-50/30 flex flex-col justify-between shadow-xs">
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center mb-4 shadow-sm">
+                  <WhatsApp className="w-5 h-5 text-white" />
+                </div>
+                <div className="flex items-center gap-2">
+                  <h3 className="text-lg font-bold text-slate-900">
+                    WhatsApp (Respon Cepat)
+                  </h3>
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold border border-emerald-300">
+                    Direkomendasikan
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                  Saluran komunikasi langsung untuk diskusi peluang karir, penjadwalan wawancara, atau respon cepat terkait portofolio.
+                </p>
+                <div className="mt-4 p-3 bg-white rounded-lg border border-emerald-200/90 font-mono text-xs sm:text-sm text-emerald-950 font-bold flex items-center justify-between">
+                  <span>{SOCIAL_LINKS.whatsappNumber}</span>
+                  <span className="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                    Online (WIB)
+                  </span>
+                </div>
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-emerald-100 flex flex-wrap items-center gap-2.5">
+                <Button
+                  href={SOCIAL_LINKS.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="primary"
+                  size="sm"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white border-emerald-600"
+                  icon={<WhatsApp className="w-4 h-4 text-white" />}
+                  iconRight={<ExternalLink className="w-3.5 h-3.5 text-white/80" />}
+                >
+                  Kirim Pesan WhatsApp
+                </Button>
+
+                <Button
+                  onClick={handleCopyWa}
+                  variant="secondary"
+                  size="sm"
+                  icon={
+                    waClipboard.hasCopied ? (
+                      <Check className="w-4 h-4 text-emerald-600" />
+                    ) : (
+                      <Copy className="w-4 h-4 text-slate-600" />
+                    )
+                  }
+                >
+                  {waClipboard.hasCopied ? 'Nomor Tersalin!' : 'Salin Nomor'}
+                </Button>
+              </div>
+            </Card>
+
+            {/* 2. Email Card */}
             <Card className="p-6 sm:p-8 border-slate-200 flex flex-col justify-between">
               <div>
-                <div className="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center mb-4">
+                <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center mb-4">
                   <Mail className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900">
                   Komunikasi via Email
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-                  Saluran utama untuk undangan wawancara kerja formal, pertanyaan teknis portofolio, atau penawaran kerja sama.
+                  Saluran resmi untuk undangan rekrutmen formal, surat penawaran kerja, atau permohonan dokumen portofolio.
                 </p>
                 <div className="mt-4 p-3 bg-slate-50 rounded-lg border border-slate-200/80 font-mono text-xs sm:text-sm text-slate-900 font-semibold break-all">
                   {SOCIAL_LINKS.email}
@@ -74,22 +136,22 @@ export const ContactPage: React.FC = () => {
                   variant="secondary"
                   size="sm"
                   icon={
-                    hasCopied ? (
+                    emailClipboard.hasCopied ? (
                       <Check className="w-4 h-4 text-teal-600" />
                     ) : (
                       <Copy className="w-4 h-4 text-slate-600" />
                     )
                   }
                 >
-                  {hasCopied ? 'Tersalin ke Clipboard!' : 'Salin Email'}
+                  {emailClipboard.hasCopied ? 'Email Tersalin!' : 'Salin Email'}
                 </Button>
               </div>
             </Card>
 
-            {/* LinkedIn Card */}
+            {/* 3. LinkedIn Card */}
             <Card className="p-6 sm:p-8 border-slate-200 flex flex-col justify-between">
               <div>
-                <div className="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center mb-4">
+                <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center mb-4">
                   <Linkedin className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900">
@@ -116,40 +178,10 @@ export const ContactPage: React.FC = () => {
               </div>
             </Card>
 
-            {/* GitHub Card */}
+            {/* 4. CV Download Card */}
             <Card className="p-6 sm:p-8 border-slate-200 flex flex-col justify-between">
               <div>
-                <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center mb-4">
-                  <Github className="w-5 h-5" />
-                </div>
-                <h3 className="text-lg font-bold text-slate-900">
-                  Aktivitas GitHub
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-                  Tinjau profil repositori dan jejak kontribusi kode independen di GitHub.
-                </p>
-                <div className="mt-4 p-3 bg-slate-50 rounded-lg border border-slate-200/80 font-mono text-xs text-slate-700 truncate">
-                  {SOCIAL_LINKS.github}
-                </div>
-              </div>
-
-              <div className="pt-6 mt-6 border-t border-slate-100 flex items-center gap-3">
-                <Button
-                  href={SOCIAL_LINKS.github}
-                  variant="secondary"
-                  size="sm"
-                  icon={<Github className="w-4 h-4 text-slate-700" />}
-                  iconRight={<ExternalLink className="w-3.5 h-3.5 text-slate-400" />}
-                >
-                  Kunjungi GitHub
-                </Button>
-              </div>
-            </Card>
-
-            {/* CV Download Card */}
-            <Card className="p-6 sm:p-8 border-slate-200 flex flex-col justify-between">
-              <div>
-                <div className="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center mb-4">
+                <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center mb-4">
                   <FileText className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900">
@@ -180,8 +212,8 @@ export const ContactPage: React.FC = () => {
           {/* Ethics & Availability Bar */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-slate-600 bg-white p-5 rounded-xl border border-slate-200/90 shadow-sm">
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-teal-600 shrink-0" />
-              <span>Respon Email: 1 x 24 Jam Kerja</span>
+              <Clock className="w-4 h-4 text-emerald-600 shrink-0" />
+              <span>Respon WhatsApp: Cepat / Siaga</span>
             </div>
             <div className="flex items-center gap-2">
               <MessageSquare className="w-4 h-4 text-teal-600 shrink-0" />

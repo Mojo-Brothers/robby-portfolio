@@ -52,7 +52,7 @@ async function generateCV() {
   });
 
   // Contact Info Row
-  const contactText = 'Email: obbyvior@gmail.com   |   LinkedIn: linkedin.com/in/roby-viori-fansya-2b0423437/   |   GitHub: github.com/Mojo-Brothers';
+  const contactText = 'WhatsApp / Tel: +62 895-3721-15913   |   Email: obbyvior@gmail.com   |   LinkedIn: roby-viori-fansya';
   page.drawText(contactText, {
     x: marginX,
     y: y - 38,
@@ -214,7 +214,7 @@ async function generateCV() {
     color: lineColor,
   });
   y -= 10;
-  page.drawText('Dokumen CV resmi Robby Viory Fansya  •  Portofolio online: https://robby-portfolio.pages.dev  •  Kontak: obbyvior@gmail.com', {
+  page.drawText('Dokumen CV resmi Robby Viory Fansya  •  WhatsApp: +62 895-3721-15913  •  Email: obbyvior@gmail.com', {
     x: marginX,
     y,
     size: 7,
