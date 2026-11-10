@@ -12,9 +12,9 @@ export const VALUE_PILLARS: ValuePillar[] = [
     iconName: 'Activity',
   },
   {
-    title: 'Penyelesaian Masalah Praktis',
+    title: 'Penyelesaian Masalah Praktis & IT Support',
     description:
-      'Berfokus mengurai friksi birokrasi manual yang memperlambat alur pelayanan: pencatatan ambulans berbasis PIN cepat, monitoring stok linen visual, dan layar jadwal dokter otomatis tanpa beban operasional baru.',
+      'Berfokus mengurai friksi operasional dan kendala teknis perangkat kerja staf: pencatatan ambulans berbasis PIN cepat, monitoring stok linen visual, dan layar jadwal dokter otomatis tanpa membebani rutinitas pelayanan.',
     iconName: 'Wrench',
   },
   {
@@ -77,48 +77,96 @@ export const TECHNICAL_EVIDENCE_LIST: TechnicalEvidenceItem[] = [
   },
 ];
 
+export type CompetencyLevel = 'Praktik' | 'Pemahaman Dasar' | 'Sedang Dipelajari';
+
+export interface SkillItem {
+  name: string;
+  context: string;
+  level: CompetencyLevel;
+}
+
 export interface SkillCategory {
   categoryName: string;
-  skills: { name: string; context: string }[];
+  categoryDescription: string;
+  skills: SkillItem[];
 }
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    categoryName: 'Healthcare Domain & Workflow',
-    skills: [
-      { name: 'Alur Operasional Rumah Sakit', context: 'Logistik ambulans rujukan dan sirkulasi linen IGD' },
-      { name: 'Triase Instalasi Gawat Darurat', context: 'Emergency Severity Index (ESI v4) & ABCDE survey' },
-      { name: 'Dokumentasi CPPT / SOAP', context: 'Struktur rekam medis elektronik terstandarisasi' },
-      { name: 'Keselamatan Penggunaan Obat', context: 'Pencegahan kontraindikasi & alergi pada resep' },
-      { name: 'Manajemen Jadwal Jaga Dokter', context: 'Jadwal bulanan dan penanganan override darurat' },
-    ],
-  },
-  {
     categoryName: 'Frontend Development',
+    categoryDescription: 'Pembangunan antarmuka web modern, responsif, dan terstruktur kuat.',
     skills: [
-      { name: 'React (v18 & v19)', context: 'Component-driven, hooks kustom, dan optimasi render' },
-      { name: 'TypeScript', context: 'Strict typing, domain contract interfaces, dan type safety' },
-      { name: 'Tailwind CSS (v3 & v4)', context: 'Design system enterprise, responsif, dan aksesibel' },
-      { name: 'Vite', context: 'Build tooling modern, modul HMR, dan bundling efisien' },
-      { name: 'Zustand & Context API', context: 'Manajemen state reaktif untuk form medis multi-langkah' },
+      { name: 'React (v18 & v19)', context: 'Component-driven, hooks kustom, route lazy loading, dan optimasi render', level: 'Praktik' },
+      { name: 'TypeScript', context: 'Strict typing, domain contract interfaces, dan type safety sistematis', level: 'Praktik' },
+      { name: 'Tailwind CSS (v3 & v4)', context: 'Utility-first styling, desain enterprise clinical precision, responsif mobile-first', level: 'Praktik' },
+      { name: 'Vite', context: 'Modern build tooling, HMR, asset hashing, dan optimasi chunking', level: 'Praktik' },
+      { name: 'State Management (Zustand & Context)', context: 'Penyimpanan state form multi-langkah dan reaktifitas data global', level: 'Praktik' },
+      { name: 'HTML5 Semantic & WCAG AA Accessibility', context: 'Struktur semantik, focus ring, dan navigasi ramah keyboard', level: 'Praktik' },
     ],
   },
   {
-    categoryName: 'Backend, Data & Cloud',
+    categoryName: 'Backend Development',
+    categoryDescription: 'Pengembangan endpoint server, otentikasi peran, dan integrasi API.',
     skills: [
-      { name: 'PostgreSQL & SQL Migrations', context: 'Skema relasional, index parsial, dan data constraint' },
-      { name: 'Prisma ORM', context: 'Type-safe database querying and schema modeling' },
-      { name: 'Firebase Firestore & Auth', context: 'NoSQL real-time synchronization dan security rules' },
-      { name: 'Node.js & Express API', context: 'Modular routing dan clinical validation pipeline' },
+      { name: 'Node.js & Express API', context: 'Modular REST routing, interceptor validasi, dan middleware', level: 'Praktik' },
+      { name: 'Firebase Firestore (Real-time NoSQL)', context: 'Sinkronisasi event listener onSnapshot, indexing, dan rules keamanan', level: 'Praktik' },
+      { name: 'Firebase Authentication & PIN Gate', context: 'Autentikasi role-based staf dan verifikasi PIN cepat untuk gawai lapangan', level: 'Praktik' },
+      { name: 'RESTful API Design', context: 'Format payload JSON terstandar, HTTP status codes, dan error handling terpusat', level: 'Praktik' },
+      { name: 'Microservices & Event-Driven Architecture', context: 'Pemahaman konsep message bus dan arsitektur terdistribusi', level: 'Pemahaman Dasar' },
     ],
   },
   {
-    categoryName: 'Mobile, Tooling & Standards',
+    categoryName: 'Database & SQL',
+    categoryDescription: 'Pemodelan skema relasional, migrasi terstruktur, dan integritas data.',
     skills: [
-      { name: 'Capacitor Android', context: 'Build dan packaging aplikasi mobile APK mandiri' },
-      { name: 'Vitest & Playwright', context: 'Unit, integration, dan headless validation testing' },
-      { name: 'Automated Reporting (PDF & XLSX)', context: 'jsPDF, jspdf-autotable, dan SheetJS' },
-      { name: 'Konsep Standar Regulasi', context: 'Referensi prinsip JCI IPSG 1-6, Permenkes 24/2022, & HL7 FHIR' },
+      { name: 'PostgreSQL Relational Design', context: 'Pemodelan skema entitas EMPI, foreign keys, cascade safety, dan partial index', level: 'Praktik' },
+      { name: 'Prisma ORM', context: 'Type-safe client generation, schema definitions, dan automated migrations', level: 'Praktik' },
+      { name: 'Structured SQL Migrations', context: 'Versioning skema database berurutan untuk menjamin konsistensi data', level: 'Praktik' },
+      { name: 'Query Optimization & Indexing', context: 'EXPLAIN ANALYZE, B-Tree index, dan pencegahan N+1 query problem', level: 'Pemahaman Dasar' },
+      { name: 'Database Backup & Restore Protocols', context: 'Prosedur dump pg_dump, restorasi berkala, dan replikasi basis data', level: 'Pemahaman Dasar' },
+    ],
+  },
+  {
+    categoryName: 'Version Control',
+    categoryDescription: 'Tata kelola kode sumber, kolaborasi tim, dan alur integrasi.',
+    skills: [
+      { name: 'Git Core & Branching Workflow', context: 'Commit konvensional, feature branching, merge, rebasing, dan conflict resolution', level: 'Praktik' },
+      { name: 'GitHub Collaboration & PR Reviews', context: 'Pull request workflow, code reviews, issue tracking, dan branch protection', level: 'Praktik' },
+      { name: 'CI/CD Automation Basics', context: 'GitHub Actions untuk automated test runner (Vitest) dan static build check', level: 'Praktik' },
+      { name: 'Repository Hygiene & Secret Protection', context: 'Pengelolaan .gitignore, pemisahan env, dan pencegahan kebocoran kredensial', level: 'Praktik' },
+    ],
+  },
+  {
+    categoryName: 'Technical Troubleshooting',
+    categoryDescription: 'Dukungan teknis perangkat keras, sistem operasi, jaringan, dan workstation.',
+    skills: [
+      { name: 'Hardware & Workstation Maintenance', context: 'Perakitan, diagnosa kerusakan komponen PC/laptop, penggantian periferal medis', level: 'Praktik' },
+      { name: 'Operating Systems Support (Windows & Android)', context: 'Instalasi, konfigurasi registry dasar, device driver, dan deploy APK Android hybrid', level: 'Praktik' },
+      { name: 'Network Fundamentals & Diagnostics', context: 'Konfigurasi LAN, IP static/DHCP, DNS, subnetting dasar, pengujian ping/traceroute', level: 'Praktik' },
+      { name: 'Periferal Medis & Printer Troubleshooting', context: 'Konfigurasi printer thermal label barcode pasien, printer gelang, dan scanner 2D', level: 'Praktik' },
+      { name: 'End-User Support & Technical Training', context: 'Panduan teknis langsung bagi dokter, perawat, dan staf administratif fasilitas kesehatan', level: 'Praktik' },
+    ],
+  },
+  {
+    categoryName: 'Healthcare Information Systems',
+    categoryDescription: 'Pemahaman mendalam mengenai alur kerja rumah sakit, triase, dan rekam medis elektronik.',
+    skills: [
+      { name: 'Triase Gawat Darurat (ESI v4 & ABCDE)', context: 'Pemodelan algoritma penentuan prioritas kegawatan berdasarkan tanda vital', level: 'Praktik' },
+      { name: 'Dokumentasi CPPT / SOAP', context: 'Perancangan alur pencatatan terintegrasi Subjective, Objective, Assessment, Plan', level: 'Praktik' },
+      { name: 'Keselamatan Penggunaan Obat (CPOE Allergy Blocker)', context: 'Validasi pencegahan peresepan obat kontraindikasi alergi secara aktif', level: 'Praktik' },
+      { name: 'Standar Permenkes No. 24/2022', context: 'Penerapan prinsip interoperabilitas, metadata EMR, dan kerahasiaan identitas pasien', level: 'Pemahaman Dasar' },
+      { name: 'HL7 FHIR R4 & SATUSEHAT Integration', context: 'Struktur resource Patient, Encounter, Condition, dan pemetaan payload Kemenkes', level: 'Sedang Dipelajari' },
+    ],
+  },
+  {
+    categoryName: 'AI-Assisted Development',
+    categoryDescription: 'Pemanfaatan kecerdasan buatan sebagai akselerator riset, validasi logika, dan pengujian kode.',
+    skills: [
+      { name: 'AI-Assisted Code Scaffolding & Refactoring', context: 'Penggunaan Claude & Gemini untuk eksplorasi arsitektur komponen dan penataan modul', level: 'Praktik' },
+      { name: 'Automated Test Suite Generation', context: 'Perumusan skenario pengujian edge-case dan negative-path testing dengan bantuan prompt terstruktur', level: 'Praktik' },
+      { name: 'Technical Documentation & Architecture Drafting', context: 'Penyusunan spesifikasi teknis, kamus data relasional, dan diagram alur sistematis', level: 'Praktik' },
+      { name: 'Code Review & Security Vulnerability Scanning', context: 'Analisis sanitasi input, pencegahan kebocoran data sensitif, dan optimasi bundle', level: 'Praktik' },
+      { name: 'Agentic Workflows & Multi-Agent Collaboration', context: 'Penerapan agent-driven programming untuk otomatisasi tugas pengembangan', level: 'Sedang Dipelajari' },
     ],
   },
 ];

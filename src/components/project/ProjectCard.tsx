@@ -3,8 +3,7 @@ import { ProjectData } from '../../types/project.types';
 import { Badge } from '../common/Badge';
 import { Button } from '../common/Button';
 import { Card } from '../common/Card';
-import { Github } from '../common/Icons';
-import { ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ShieldCheck, CheckCircle2, Lock, Sparkles } from 'lucide-react';
 
 interface ProjectCardProps {
   project: ProjectData;
@@ -21,7 +20,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <Card
       interactive
-      className={`p-6 sm:p-8 flex flex-col justify-between border-slate-200/90 hover:border-teal-500/40 ${className}`}
+      className={`p-6 sm:p-8 flex flex-col justify-between border-slate-200/90 hover:border-teal-500/40 transition-all ${className}`}
     >
       <div className="space-y-4">
         {/* Header Badges */}
@@ -29,9 +28,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           <Badge variant="teal" size="md">
             {project.categoryLabel}
           </Badge>
-          <span className="text-xs font-mono text-slate-500">
-            {project.timeframe}
-          </span>
+          <div className="flex items-center gap-2">
+            {project.isPrivateRepo && (
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono text-slate-600 bg-slate-100 border border-slate-200">
+                <Lock className="w-3 h-3 text-slate-500" />
+                <span>Private Repo</span>
+              </span>
+            )}
+            <span className="text-xs font-mono text-slate-500">
+              {project.timeframe}
+            </span>
+          </div>
         </div>
 
         {/* Title & Subtitle */}
@@ -43,6 +50,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             {project.subtitle}
           </p>
         </div>
+
+        {/* Development Status Badge */}
+        {project.developmentStatus && (
+          <div className="text-[11px] font-mono text-teal-900 bg-teal-50/80 border border-teal-200/70 px-2.5 py-1 rounded-md flex items-center gap-1.5">
+            <Sparkles className="w-3 h-3 text-teal-600 shrink-0" />
+            <span className="truncate">{project.developmentStatus}</span>
+          </div>
+        )}
 
         {/* Role Highlight */}
         <div className="text-xs text-slate-700 bg-slate-50 border border-slate-100 p-2.5 rounded-lg flex items-center gap-2">
@@ -104,17 +119,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           size="sm"
           iconRight={<ArrowRight className="w-4 h-4" />}
         >
-          Lihat Studi Kasus
+          Lihat Studi Kasus Lengkap
         </Button>
 
-        <Button
-          href={project.githubUrl}
-          variant="secondary"
-          size="sm"
-          icon={<Github className="w-4 h-4 text-slate-700" />}
-        >
-          Repositori GitHub
-        </Button>
+        <span className="text-xs font-mono text-slate-500">
+          Studi Kasus & Arsitektur Terverifikasi
+        </span>
       </div>
     </Card>
   );

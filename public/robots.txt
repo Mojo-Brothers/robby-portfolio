@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://robbyviory.dev/sitemap.xml
+Sitemap: https://robby-portfolio.pages.dev/sitemap.xml

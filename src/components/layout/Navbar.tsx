@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, X, ExternalLink } from 'lucide-react';
+import { Menu, X, ExternalLink, Download } from 'lucide-react';
 import { Github, Linkedin } from '../common/Icons';
 import { NAV_LINKS, SOCIAL_LINKS } from '../../data/navigation.data';
 import { Container } from '../common/Container';
@@ -34,14 +34,14 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2" aria-label="Main Navigation">
+          <nav className="hidden md:flex items-center gap-1 lg:gap-1.5" aria-label="Main Navigation">
             {NAV_LINKS.map((item) => (
               <NavLink
                 key={item.href}
                 to={item.href}
                 end={item.href === '/'}
                 className={({ isActive }) =>
-                  `px-3.5 py-1.5 rounded-lg text-sm font-medium transition-colors focus-ring ${
+                  `px-3 py-1.5 rounded-lg text-xs lg:text-sm font-medium transition-colors focus-ring ${
                     isActive
                       ? 'text-teal-700 bg-teal-50/80 font-semibold'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
@@ -52,7 +52,17 @@ export const Navbar: React.FC = () => {
               </NavLink>
             ))}
 
-            <div className="h-4 w-px bg-slate-200 mx-2" />
+            <div className="h-4 w-px bg-slate-200 mx-1.5" />
+
+            {/* Quick CV Download */}
+            <a
+              href={SOCIAL_LINKS.cvPdf}
+              download="CV_Robby_Viory_Fansya.pdf"
+              className="hidden xl:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-teal-900 bg-teal-50 border border-teal-200/80 hover:bg-teal-100 transition-colors focus-ring"
+            >
+              <Download className="w-3.5 h-3.5 text-teal-700" />
+              <span>Unduh CV</span>
+            </a>
 
             {/* Quick External Links */}
             <a
@@ -60,7 +70,7 @@ export const Navbar: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Kunjungi Profil GitHub Robby Viory Fansya"
-              className="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors focus-ring"
+              className="p-1.5 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors focus-ring"
             >
               <Github className="w-4 h-4" />
             </a>
@@ -69,7 +79,7 @@ export const Navbar: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Terhubung dengan Robby Viory Fansya di LinkedIn"
-              className="p-2 text-slate-500 hover:text-teal-700 hover:bg-slate-100 rounded-lg transition-colors focus-ring"
+              className="p-1.5 text-slate-500 hover:text-teal-700 hover:bg-slate-100 rounded-lg transition-colors focus-ring"
             >
               <Linkedin className="w-4 h-4" />
             </a>
@@ -113,14 +123,22 @@ export const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          <div className="pt-3 border-t border-slate-100 flex items-center justify-between px-1">
-            <span className="text-xs text-slate-500 font-mono">Tautan Eksternal</span>
+          <div className="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 px-1">
+            <a
+              href={SOCIAL_LINKS.cvPdf}
+              download="CV_Robby_Viory_Fansya.pdf"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-teal-900 bg-teal-50 border border-teal-200 rounded-md"
+            >
+              <Download className="w-3.5 h-3.5 text-teal-700" />
+              <span>Unduh CV PDF</span>
+            </a>
+
             <div className="flex items-center gap-2">
               <a
                 href={SOCIAL_LINKS.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-md transition-colors"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-md transition-colors"
               >
                 <Github className="w-3.5 h-3.5" />
                 <span>GitHub</span>
@@ -129,7 +147,7 @@ export const Navbar: React.FC = () => {
                 href={SOCIAL_LINKS.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-teal-800 bg-teal-50 hover:bg-teal-100 rounded-md transition-colors"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium text-teal-800 bg-teal-50 hover:bg-teal-100 rounded-md transition-colors"
               >
                 <Linkedin className="w-3.5 h-3.5" />
                 <span>LinkedIn</span>

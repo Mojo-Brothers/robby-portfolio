@@ -11,6 +11,20 @@ export const PROJECTS_DATA: Record<string, ProjectData> = {
     category: 'clinical-his',
     categoryLabel: 'Clinical HIS Reference Architecture',
     githubUrl: 'https://github.com/Mojo-Brothers/NurseFlow-WebApp',
+    isPrivateRepo: true,
+    repoVisibilityNote:
+      'Repositori Private — Akses repositori dibatasi untuk perlindungan hak cipta proyek independen. Seluruh arsitektur teknis, diagram alur, skema basis data, dan bukti pengujian otomatis didokumentasikan secara transparan pada studi kasus ini.',
+    developmentStatus: 'Modul Inti Selesai (Core Clinical Architecture & Automated Tests Verified — 44 Suites / 185 Tests)',
+    currentLimitations: [
+      'Integrasi penuh SATUSEHAT / HL7 FHIR R4 eksternal masih dalam tahap pemodelan skema relasional sandbox dan pemetaan payload data, belum terhubung ke production gateway Kemenkes RI.',
+      'Modul kasir dan billing rumah sakit belum terintegrasi dengan payment gateway eksternal, difokuskan pada agregasi biaya tindakan dan resep simulasi.',
+      'Modul farmasi difokuskan pada pengamanan resep gawat darurat (hard-blocker alergi obat & alur stok FEFO), belum mencakup peracikan infus sitostatika khusus rawat inap.',
+    ],
+    plannedRoadmap: [
+      'Eksplorasi pengujian integrasi REST API sandbox SATUSEHAT Kementerian Kesehatan RI.',
+      'Pengembangan antarmuka mobile perawat (PWA) dengan kapabilitas pencatatan tanda vital offline-first.',
+      'Penyusunan audit trail kepatuhan regulasi rekam medis digital komprehensif sesuai Permenkes 24/2022.',
+    ],
     timeframe: '2025 - 2026',
     role: {
       title: 'Independent Full-Stack Developer & Clinical Workflow Modeler',
@@ -124,13 +138,13 @@ export const PROJECTS_DATA: Record<string, ProjectData> = {
         standard: 'Permenkes No. 24/2022 (Rekam Medis Elektronik)',
         conceptApplied: 'Standarisasi metadata rekam medis, tata kelola riwayat klinis, dan privasi identitas.',
         implementationDetail:
-          'Struktur data SOAP terstandar, pelacakan waktu kunjungan (*encounter timestamp*), dan masking NIK.',
+          'Struktur data SOAP terstandar, pelacakan waktu kunjungan (encounter timestamp), dan masking NIK.',
       },
       {
         standard: 'HL7 FHIR R4 (Eksplorasi Interoperabilitas)',
         conceptApplied: 'Kesesuaian struktur resource data kesehatan untuk integrasi lintas platform.',
         implementationDetail:
-          'Pemodelan entitas `Patient`, `Encounter`, `Observation`, dan `Condition` mengacu pada format standar FHIR.',
+          'Pemodelan entitas Patient, Encounter, Observation, dan Condition mengacu pada format standar FHIR.',
       },
     ],
     screenshots: [
@@ -184,6 +198,20 @@ export const PROJECTS_DATA: Record<string, ProjectData> = {
     category: 'operational-platform',
     categoryLabel: 'Emergency Department Operations Platform',
     githubUrl: 'https://github.com/Mojo-Brothers/igd-manajemen-sistem',
+    isPrivateRepo: true,
+    repoVisibilityNote:
+      'Repositori Private — Dirancang untuk pemecahan masalah operasional internal lapangan. Seluruh modul, alur form driver ambulans, alur stok linen, dan display TV didokumentasikan di halaman ini.',
+    developmentStatus: 'Sistem Operasional Lapangan Teruji (Workstation Ambulans, LinenFlow & Display On-Call)',
+    currentLimitations: [
+      'Fitur pelacakan rute Leaflet Maps memerlukan konektivitas internet aktif untuk resolusi titik koordinat geocoding.',
+      'Modul LinenFlow difokuskan pada perputaran linen kotor/bersih IGD dan unit laundry sentral, belum mencakup seluruh bangsal rawat inap.',
+      'Otentikasi driver ambulans menggunakan PIN gate 6-digit untuk kecepatan input di lapangan tanpa login email rumit, bukan autentikasi biometrik.',
+    ],
+    plannedRoadmap: [
+      'Penyempurnaan cache offline peta Leaflet saat armada ambulans berada di daerah blank spot sinyal.',
+      'Integrasi notifikasi WhatsApp Gateway otomatis ke koordinator IGD saat stok linen mendekati batas kritis.',
+      'Dukungan ekspor pelaporan multi-periode per semester dan tahunan secara otomatis.',
+    ],
     timeframe: '2025 - 2026',
     role: {
       title: 'Independent Full-Stack Developer & Operational Workflow Designer',

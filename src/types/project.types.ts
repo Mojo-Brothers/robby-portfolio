@@ -53,6 +53,11 @@ export interface ProjectData {
   category: ProjectCategory;
   categoryLabel: string;
   githubUrl: string;
+  isPrivateRepo?: boolean;
+  repoVisibilityNote?: string;
+  developmentStatus?: string;
+  currentLimitations?: string[];
+  plannedRoadmap?: string[];
   timeframe: string;
   role: ProjectRole;
   evidence: ProjectEvidence;
