@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-cv.js && tsc && vite build",
+    "build": "node scripts/generate-cv.js && tsc && vite build && node scripts/post-build.js",
     "preview": "vite preview"
   },
   "dependencies": {
